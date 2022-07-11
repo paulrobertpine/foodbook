@@ -1,0 +1,7 @@
+#site-main {
+  .reading {
+    @include spacer;
+    max-width: $breakpoint-med;
+    margin: 0 auto;
+  }
+}

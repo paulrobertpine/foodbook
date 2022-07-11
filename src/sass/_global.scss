@@ -1,0 +1,66 @@
+html {
+  font-size: calc(16px + 4 * ((100vw - 320px) / 680));
+
+  @include small {
+    font-size: 16px;  
+  }
+
+  @include large {
+    font-size: 22px;
+  }
+}
+
+body {
+  font-family: $font-main;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: $breakpoint-lrg;
+  margin: 0 auto;
+}
+
+h1.fancy {
+  color: $clr-accent;
+  text-shadow: 0.1rem 0.1rem 0 $clr-primary;
+  margin: 0 0 1rem 0;
+  line-height: 1;
+
+  a {
+    text-decoration: none;
+    color: $clr-accent;
+  }
+}
+
+svg {
+  fill: $clr-accent;
+
+  &:hover {
+    fill: lighten($clr-accent, 5%);
+    cursor: pointer;
+  }
+}
+
+button {
+  background-color: transparent;
+  display: flex;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.page-header {
+  padding: 0.5rem;
+  background-color: $clr-bg;
+  color: $clr-primary;
+  border-bottom: 1px solid $clr-accent;
+  font-weight: bold;
+
+  .chunk {
+    margin: 0 1rem 1rem 0;
+
+    &:last-child {
+      margin: 0 0 1rem 0;
+    }
+  }
+}
