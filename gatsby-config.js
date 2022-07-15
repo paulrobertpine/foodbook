@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Songbook 2022`,
-    siteUrl: `https://songbook.netlify.app`,
+    title: `Food Buddies`,
+    siteUrl: `https://foodbuddies.netlify.app`,
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/icon.svg",
       },
     },
     "gatsby-transformer-remark",
@@ -36,10 +36,10 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "songs",
-        path: "./songs/",
+        name: "content",
+        path: "./content/",
       },
-      __key: "songs",
+      __key: "soncontentgs",
     },
     {
       resolve: "gatsby-plugin-react-svg",

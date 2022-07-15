@@ -1,8 +1,7 @@
 import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
-import { MdChangeCircle, MdClear, MdSortByAlpha } from "react-icons/md"
 import Layout from "../components/layout"
-const title = "Songbook"
+const title = "Food Buddies"
 
 export default function Home({ data }) {
   const { allMarkdownRemark } = data
@@ -10,76 +9,12 @@ export default function Home({ data }) {
   const [search, setSearch] = useState("")
   const [shuffled, setShuffled] = useState(1)
 
-  let filteredSongs = posts.filter((post) => {
-    return (
-      post.frontmatter.title.toLowerCase().indexOf(search.toLowerCase()) !==
-        -1 ||
-      post.frontmatter.artist.toLowerCase().indexOf(search.toLowerCase()) !== -1
-    )
-  })
-
-  if (shuffled > 0) {
-    shuffle(filteredSongs)
-  }
-
-  function showSongs(songs) {
-    if (songs.length > 0) {
-      return (
-        <ol className="song-list ">
-          {songs.map((song) => {
-            return (
-              <li key={song.fields.slug}>
-                <Link to={song.fields.slug}>
-                  <span className="title">{song.frontmatter.title}</span>
-                  <span className="artist">{song.frontmatter.artist}</span>
-                </Link>
-              </li>
-            )
-          })}
-        </ol>
-      )
-    } else {
-      return <p>No songs found</p>
-    }
-  }
-
-  function searchSongs(query) {
-    setSearch(query)
-  }
-
   return (
     <Layout title={title}>
       <article id="home">
         <header className="page-header">
-          <section className="container">
-
-            <span id="song-list-control" className="chunk">
-              <span>{filteredSongs.length} Songs</span>
-              <button onClick={() => setShuffled(shuffled + 1)}>
-                <MdChangeCircle />
-              </button>
-              <button onClick={() => setShuffled(0)}>
-                <MdSortByAlpha />
-              </button>
-            </span>
-
-            <span id="filter-search" className="chunk">
-              <input
-                type="text"
-                placeholder="🔍 Search title or artist"
-                value={search}
-                onChange={(e) => searchSongs(e.target.value)}
-              />
-              <button onClick={() => setSearch("")}>
-                {search && <MdClear />}
-              </button>
-            </span>
-          </section>
+          <section className="container">here</section>
         </header>
-
-        <section className="container reading">
-          {showSongs(filteredSongs)}
-        </section>
       </article>
     </Layout>
   )
@@ -91,7 +26,6 @@ export const query = graphql`
       nodes {
         frontmatter {
           title
-          artist
         }
         fields {
           slug

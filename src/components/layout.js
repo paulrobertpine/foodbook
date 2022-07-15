@@ -4,7 +4,7 @@ import Header from "./header"
 import Footer from "./footer"
 import "../sass/styles.scss"
 
-export default function Layout({ title, subtitle, children }) {
+export default function Layout({ title, children }) {
   return (
     <>
       <Helmet>
@@ -12,7 +12,7 @@ export default function Layout({ title, subtitle, children }) {
         <meta charSet="utf-8" />
       </Helmet>
 
-      <Header title={title} subtitle={subtitle}/>
+      <Header title={title}/>
       <main id="site-main">{children}</main>
       <Footer />
     </>

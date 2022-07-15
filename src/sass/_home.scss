@@ -4,20 +4,6 @@
       @include flex;
       justify-content: space-between;
 
-      #song-list-control {
-        @include flex;
-        margin: 0;
-
-        button,
-        span {
-          margin: 0.5rem;
-        }
-
-        button {
-          font-size: 2rem;
-        }
-      }
-
       #filter-search {
         @include flex;
         border-radius: 10rem;
@@ -50,45 +36,6 @@
 
         @include medium {
           width: auto;
-        }
-      }
-    }
-  }
-
-  ol.song-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    li {
-      margin: 1rem;
-
-      &:hover {
-        background-color: $clr-bg;
-      }
-
-      a {
-        display: block;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        color: $clr-primary;
-
-        .title {
-          font-weight: 500;
-        }
-
-        .artist {
-          margin-left: 0.5rem;
-          font-size: 0.8rem;
-
-          &::before {
-            content: "(";
-          }
-
-          &::after {
-            content: ")";
-          }
         }
       }
     }
