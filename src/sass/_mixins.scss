@@ -50,3 +50,11 @@
 @function strip-unit($value) {
   @return calc($value / 1px);
 }
+
+@mixin border-bottom {
+  border-bottom: 3px dotted #ccc;
+}
+
+@mixin border-top {
+  border-top: 3px dotted #ccc;
+}
