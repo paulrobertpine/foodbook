@@ -1,14 +1,14 @@
 import React from "react"
 import Link from "gatsby-link"
-// import HeaderIcon from "../images/musician.inline.svg"
+import HeaderIcon from "../images/icon.svg"
 
-export default function Header({ title }) {
+export default function Header() {
   return (
     <header id="site-header">
       <section className="container">
         <Link to="/" id="site-logo">
-          {/* <HeaderIcon /> */}here
-          <h1 className="fancy chunk">{title}</h1>
+          <HeaderIcon />
+          <span>Food Buddies</span>
         </Link>
       </section>
     </header>

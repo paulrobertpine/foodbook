@@ -1,12 +1,12 @@
 html {
-  font-size: calc(16px + 4 * ((100vw - 320px) / 680));
+  font-size: $font-min;
 
-  @include small {
-    font-size: 16px;  
+  @include breakpoint($container-min) {
+    @include fluid-type;
   }
 
-  @include large {
-    font-size: 22px;
+  @include breakpoint($container-max) {
+    font-size: $font-max;
   }
 }
 
@@ -15,29 +15,13 @@ body {
   line-height: 1.5;
 }
 
-.container {
-  max-width: $breakpoint-lrg;
-  margin: 0 auto;
-}
-
-h1.fancy {
+a {
   color: $clr-accent;
-  text-shadow: 0.1rem 0.1rem 0 $clr-primary;
-  margin: 0 0 1rem 0;
-  line-height: 1;
-
-  a {
-    text-decoration: none;
-    color: $clr-accent;
-  }
-}
-
-svg {
-  fill: $clr-accent;
+  font-family: $font-contrast;
+  font-weight: bold;
 
   &:hover {
-    fill: lighten($clr-accent, 5%);
-    cursor: pointer;
+    color: lighten($clr-accent, 10%);
   }
 }
 
@@ -49,18 +33,12 @@ button {
   padding: 0;
 }
 
-.page-header {
+.container {
+  max-width: $breakpoint-lrg;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.chunk {
   padding: 0.5rem;
-  background-color: $clr-bg;
-  color: $clr-primary;
-  border-bottom: 1px solid $clr-accent;
-  font-weight: bold;
-
-  .chunk {
-    margin: 0 1rem 1rem 0;
-
-    &:last-child {
-      margin: 0 0 1rem 0;
-    }
-  }
 }

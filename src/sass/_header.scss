@@ -1,31 +1,29 @@
 #site-header {
-  background-color: $clr-primary;
+  border-bottom: 1px dashed $clr-primary;
 
-  section.container {
+  .container {
     @include flex;
-    padding: .5rem;
+    justify-content: center;
 
     a#site-logo {
       @include flex;
+      font-family: $font-main;
       margin: 0;
       line-height: 0;
       text-decoration: none;
+      color: $clr-primary;
 
       svg {
-        width: 2.5rem;
+        width: 5rem;
         height: auto;
-        fill: $clr-accent;
+        fill: $clr-primary;
         margin-right: 1rem;
       }
 
-      h1 {
-        margin: 0;
+      span {
+        font-size: 2.5rem;
+        font-weight: 200;
       }
-    }
-
-    .subtitle {
-      font-weight: bold;
-      color: $clr-accent;
     }
   }
 }

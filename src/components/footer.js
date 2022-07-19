@@ -1,6 +1,5 @@
 import React from "react"
 import Link from "gatsby-link"
-import { IoArrowUpCircle } from "react-icons/io5"
 
 export default function Footer() {
   return (

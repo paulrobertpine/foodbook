@@ -1,23 +1,8 @@
 #site-footer {
-  background-color: $clr-primary;
-  color: $clr-accent;
-  z-index: 5;
-  position: relative;
-  padding: 1rem;
+  border-top: 1px dashed $clr-primary;
 
-  section.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    span a {
-      color: $clr-accent;
-    }
-
-    .scroll-control {
-      button {
-        font-size: 3rem;
-      }
-    }
+  .container {
+    @include flex;
+    justify-content: center;
   }
 }
