@@ -9,7 +9,7 @@
       @include flex;
       font-family: $font-main;
       margin: 0;
-      line-height: 0;
+      // line-height: 0;
       text-decoration: none;
       color: $clr-primary;
 
@@ -21,8 +21,9 @@
       }
 
       span {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 200;
+        display: block;
       }
     }
   }

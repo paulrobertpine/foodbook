@@ -13,8 +13,9 @@ export default function Home({ data }) {
     <Layout title={title}>
       <article id="home">
         <header className="page-header">
-          <section className="container">here</section>
+          <section className="container">search widget, etc</section>
         </header>
+        <section className="grid container">grid goes here</section>
       </article>
     </Layout>
   )

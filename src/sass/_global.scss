@@ -15,9 +15,27 @@ body {
   line-height: 1.5;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
 a {
   color: $clr-accent;
-  font-family: $font-contrast;
+  // font-family: $font-contrast;
   font-weight: bold;
 
   &:hover {
