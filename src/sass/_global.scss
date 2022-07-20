@@ -29,6 +29,15 @@ h3 {
   font-size: 1rem;
 }
 
+ul,
+ol {
+  padding: 0;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
 a {
   color: $clr-accent;
   // font-family: $font-contrast;
