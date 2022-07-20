@@ -1,42 +1,27 @@
 #home {
-  header {
-    section.container {
-      @include flex;
-      justify-content: space-between;
+  ol.posts-grid {
+    display: grid;
+    margin: 0;
+    list-style: none;
 
-      #filter-search {
-        @include flex;
-        border-radius: 10rem;
-        background-color: white;
-        width: 100%;
-        border: 1px solid $clr-primary;
-        padding: 0 0.5rem;
+    li.posts-grid-item {
+      max-width: 300px;
+      background-color: $clr-bg;
+      border: 1px solid $clr-border;
+
+      a {
+        color: $clr-primary;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      h2 {
         margin: 0;
-
-        input {
-          border: 0;
-          border-radius: 10rem;
-          margin-right: 0.5rem;
-          padding: 0.5rem;
-          flex-grow: 1;
-
-          &:focus-visible {
-            outline: none;
-          }
-
-          &::placeholder {
-            font-size: 0.9rem;
-          }
-        }
-
-        button {
-          width: 1.5rem;
-          font-size: 1.5rem;
-        }
-
-        @include medium {
-          width: auto;
-        }
+        line-height: 1.2;
+        font-size: 1rem;
       }
     }
   }

@@ -1,11 +1,13 @@
 import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 const title = "Food Buddies"
 
 export default function Home({ data }) {
   const { allMarkdownRemark } = data
   const posts = allMarkdownRemark.nodes
+
   const [search, setSearch] = useState("")
   const [shuffled, setShuffled] = useState(1)
 
@@ -15,7 +17,26 @@ export default function Home({ data }) {
         <header className="page-header">
           <section className="container">search widget, etc</section>
         </header>
-        <section className="grid container">grid goes here</section>
+        <section className="container">
+          <ol className="posts-grid">
+            {posts.map((post) => {
+              const postImage = getImage(post.frontmatter.cover)
+              return (
+                <li key={post.fields.slug} className="posts-grid-item">
+                  <Link to={post.fields.slug}>
+                    <GatsbyImage
+                      image={postImage}
+                      alt={post.frontmatter.title + " cover image"}
+                    />
+                    <section className="chunk">
+                      <h2>{post.frontmatter.title}</h2>
+                    </section>
+                  </Link>
+                </li>
+              )
+            })}
+          </ol>
+        </section>
       </article>
     </Layout>
   )
@@ -27,6 +48,11 @@ export const query = graphql`
       nodes {
         frontmatter {
           title
+          cover {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         fields {
           slug
