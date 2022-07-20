@@ -6,7 +6,7 @@ amount: about 3 cups
 tags: [spreads]
 ---
 
-This is the first recipe on Food Buddies. Yeah, it's a cheeseburger–but it has carmelized onions on it!
+Stolen from [Epicurious](https://www.epicurious.com/recipes/food/views/easy-canned-chickpea-hummus). Boiling canned chickpeas in water for 20 minutes before puréeing them gives you the silky-smooth texture you normally only get in hummus made from dried beans.
 
 ## Ingredients
 
