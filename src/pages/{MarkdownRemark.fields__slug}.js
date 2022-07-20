@@ -21,7 +21,7 @@ export default function Recipe({ data }) {
             </section>
           </section>
         </header>
-        <section className="reading">
+        <section className="container reading">
           <figure className="post-image">
             <GatsbyImage
               image={postImage}

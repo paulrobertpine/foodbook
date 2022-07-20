@@ -16,4 +16,8 @@
   .post-meta {
     @include flex;
   }
+
+  .post-image {
+    margin: 0;
+  }
 }
