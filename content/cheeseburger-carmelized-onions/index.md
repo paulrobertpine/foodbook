@@ -2,7 +2,7 @@
 title: Cheeseburger with carmelized onions
 author: Paul Clifford
 cover: cheeseburger.jpg
-serves: 4-6
+amount: ~6 burgers
 tags: [bbq, burger]
 ---
 

@@ -16,7 +16,7 @@ export default function Recipe({ data }) {
 
             <section className="post-meta">
               <span className="author chunk">{frontmatter.author}</span>
-              <span className="serves chunk">Serves {frontmatter.serves}</span>
+              <span className="serves chunk">Amount: {frontmatter.amount}</span>
               <span className="tags chunk">
                 {frontmatter.tags.map((tag) => {
                   return (
@@ -53,7 +53,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         author
-        serves
+        amount
         tags
         cover {
           childImageSharp {
