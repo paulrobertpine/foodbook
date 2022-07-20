@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { graphql } from "gatsby"
+import React from "react"
+import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 
@@ -17,7 +17,15 @@ export default function Recipe({ data }) {
             <section className="post-meta">
               <span className="author chunk">{frontmatter.author}</span>
               <span className="serves chunk">Serves {frontmatter.serves}</span>
-              <span className="tags chunk">{frontmatter.tags}</span>
+              <span className="tags chunk">
+                {frontmatter.tags.map((tag) => {
+                  return (
+                    <Link to="#" className="tag">
+                      {tag}
+                    </Link>
+                  )
+                })}
+              </span>
             </section>
           </section>
         </header>
