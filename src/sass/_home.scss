@@ -1,5 +1,6 @@
 #home {
   ol.posts-grid {
+    // border: 1px solid red;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

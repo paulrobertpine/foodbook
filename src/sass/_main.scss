@@ -30,4 +30,8 @@
   .post-image {
     margin: 0;
   }
+
+  ol > li::marker {
+    font-weight: bold;
+  }
 }

@@ -20,7 +20,7 @@ export default function Recipe({ data }) {
               <span className="tags chunk">
                 {frontmatter.tags.map((tag) => {
                   return (
-                    <Link to="#" className="tag">
+                    <Link key={tag} to="#" className="tag">
                       {tag}
                     </Link>
                   )
