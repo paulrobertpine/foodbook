@@ -1,9 +1,4 @@
-#site-main {
-  .reading {
-    max-width: $breakpoint-med;
-    margin: 0 auto;
-  }
-
+.recipe {
   .page-header {
     background-color: $clr-bg;
     @include border-bottom;
@@ -29,6 +24,10 @@
 
   .post-image {
     margin: 0;
+  }
+
+  h2 {
+    @include border-bottom;
   }
 
   ol > li::marker {

@@ -1,4 +1,43 @@
 #home {
+  .page-header {
+    background-color: $clr-bg;
+    @include border-bottom;
+
+    h1 {
+      margin: 0;
+    }
+
+    #filter-search {
+      @include flex;
+      border-radius: 10rem;
+      background-color: white;
+      border: 1px solid $clr-primary;
+      padding: 0 0.5rem;
+      margin: 0;
+
+      input {
+        border: 0;
+        border-radius: 10rem;
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+        flex-grow: 1;
+
+        &:focus-visible {
+          outline: none;
+        }
+
+        &::placeholder {
+          font-size: 0.9rem;
+        }
+      }
+
+      button {
+        width: 1.5rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
   ol.posts-grid {
     // border: 1px solid red;
     display: grid;
