@@ -22,6 +22,10 @@
         padding: 0.5rem;
         flex-grow: 1;
 
+        @include small {
+          max-width: 100%;
+        }
+
         &:focus-visible {
           outline: none;
         }
@@ -42,12 +46,20 @@
     // border: 1px solid red;
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     margin: 0;
     list-style: none;
 
+    @include breakpoint($breakpoint-small) {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
     li.posts-grid-item {
       max-width: 300px;
+
+      @include small {
+        max-width: 100%;
+      }
+
       margin: 0 auto;
       background-color: $clr-bg;
       border: 1px solid $clr-border;
