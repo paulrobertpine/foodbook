@@ -78,9 +78,28 @@ button {
   padding: 0.5rem;
 }
 
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 0.3rem;
+  }
+}
+
 .page-header {
   background-color: $clr-bg;
   @include border-bottom;
+
+  .container {
+    justify-content: space-between;
+  }
 
   h1 {
     margin: 0;

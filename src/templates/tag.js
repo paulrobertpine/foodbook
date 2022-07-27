@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { ImPriceTags } from "react-icons/im"
 import Layout from "../components/layout"
 
 export default function Tag({ data, pageContext }) {
@@ -11,11 +12,14 @@ export default function Tag({ data, pageContext }) {
     <Layout title={pageContext.tag + " Recipes"}>
       <article className="tag">
         <header className="page-header">
-          <section className="container">
+          <section className="container inline">
             <h1 className="chunk">
-              {allMarkdownRemark.totalCount} Recipes Tagged{" "}
-              <em>{pageContext.tag}</em>
+              <em>{pageContext.tag}</em> Recipes ({allMarkdownRemark.totalCount}
+              )
             </h1>
+            <Link to="/tags/" className="chunk icon-link">
+              <ImPriceTags /> See all tags
+            </Link>
           </section>
         </header>
         <section className="container">
