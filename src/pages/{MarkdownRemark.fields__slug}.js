@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import { kebabCase } from "lodash"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 
@@ -20,7 +21,11 @@ export default function Recipe({ data }) {
               <span className="tags chunk">
                 {frontmatter.tags.map((tag) => {
                   return (
-                    <Link key={tag} to="#" className="tag">
+                    <Link
+                      key={tag}
+                      to={`/tags/${kebabCase(tag)}/`}
+                      className="tag"
+                    >
                       {tag}
                     </Link>
                   )
