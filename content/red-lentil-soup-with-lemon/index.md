@@ -2,7 +2,7 @@
 title: Red Lentil Soup With Lemon
 author: Paul Clifford
 cover: red-lentil-soup.jpg
-amount: one 1 1/2-pound loaf
+amount: 4 servings
 tags: [soup, lentil]
 ---
 

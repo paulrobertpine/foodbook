@@ -16,7 +16,7 @@ export default function Recipe({ data }) {
             <h1 className="chunk">{frontmatter.title}</h1>
 
             <section className="post-meta">
-              <span className="author chunk">{frontmatter.author}</span>
+              {/* <span className="author chunk">{frontmatter.author}</span> */}
               <span className="serves chunk">Amount: {frontmatter.amount}</span>
               <span className="tags chunk">
                 {frontmatter.tags.map((tag) => {
