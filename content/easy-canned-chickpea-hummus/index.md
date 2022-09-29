@@ -3,7 +3,7 @@ title: Easy Canned Chickpea Hummus
 author: Paul Clifford
 cover: hummus.jpg
 amount: about 3 cups
-tags: [spreads]
+tags: [spread, chickpea]
 ---
 
 Stolen from [Epicurious](https://www.epicurious.com/recipes/food/views/easy-canned-chickpea-hummus). Boiling canned chickpeas in water for 20 minutes before puréeing them gives you the silky-smooth texture you normally only get in hummus made from dried beans.
