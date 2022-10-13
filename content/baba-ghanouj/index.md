@@ -3,7 +3,7 @@ title: Baba Ghanouj
 author: Paul Clifford
 cover: baba-ganoush.jpg
 amount: About 2 cups
-tags: [spreads, eggplant]
+tags: [spread, eggplant]
 ---
 
 Stolen from [NY Times](https://cooking.nytimes.com/recipes/1014030-baba-ghanouj).
